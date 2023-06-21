@@ -1,3 +1,4 @@
-﻿This is a team project in collaboration with @AntoniSDev.
+﻿This is a team project in collaboration with @WhidanB.
 
-The goal was to create a 
+
+https://mempoule.lol/antoni/Escromania/

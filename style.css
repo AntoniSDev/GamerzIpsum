@@ -1,0 +1,1581 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Electrolize&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.burger {
+  display: none;
+}
+
+.context {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  top: 50px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_bar {
+  display: flex;
+  align-items: center;
+  /* border: 1px gray solid; */
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
+  background-color: red;
+  transition: background-color 0.5s ease;
+}
+
+.search_bar svg path {
+  stroke: #fff;
+}
+
+.search {
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 2%;
+}
+.search:focus {
+  outline: none;
+}
+
+nav {
+  border-radius: 1rem;
+  height: 70px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 20px;
+  z-index: 5;
+  box-shadow: -12px 11px 15px -5px rgba(0, 0, 0, 0.61);
+}
+
+.liens {
+    gap: 1%;
+}
+
+body > header > nav > a {
+    margin-right: 1%;
+}
+
+.logo {
+  font-family: "Road Rage";
+  border-radius: 0.5rem;
+}
+
+.logo:hover {
+  background-color: #a4090d;
+}
+
+nav div a:hover {
+  background-color: #a4090d;
+}
+
+nav a {
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Electrolize";
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-weight: 500;  
+}
+
+video {
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 24px 20px rgba(255, 0, 0, 0.27);
+  height: 85vh;
+}
+
+.intro {
+  font-family: "Electrolize";
+  font-size: 48px;
+  text-align: left;
+  color: #fff;
+  background: rgba(255, 255, 255, 0);
+  z-index: 2;
+  padding-right: 30%;
+  padding-left: 3%;
+  width: 60%;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.categorie {
+  text-align: center;
+  height: 200px;
+  background-position: center;
+  transition: 0.3s ease;
+}
+
+.round:nth-child(1) div:nth-child(1) {
+  border-radius: 10px 0 0 0;
+}
+
+.round:nth-child(3) div:nth-child(1) {
+  border-radius: 0 10px 0 0;
+}
+
+.round:nth-child(4) div:nth-child(1) {
+  border-radius: 0 0 0 10px;
+}
+
+.round:nth-child(6) div:nth-child(1) {
+  border-radius: 0 0 10px 0;
+}
+
+.categorie:hover {
+  scale: 1.1;
+  transition: 0.3s ease;
+}
+
+.cate-container a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.container {
+  max-width: 450px;
+}
+
+.imgGallery img {
+  padding: 8px;
+  max-width: 250px;
+}
+
+.screens img {
+  padding: 8px;
+  max-width: 250px;
+}
+
+.link-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(0.5px);
+}
+
+.cate-container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+h2 {
+  font-family: "Electrolize";
+  font-size: 32px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #fff;
+  height: 150px;
+  box-shadow: 0px 14px 24px 20px rgba(255, 0, 0, 0.27);
+  gap: 10%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-left a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #fff;
+  background-color: red;
+  font-family: "Road Rage";
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.footer-left p {
+  color: gray;
+  font-family: "Electrolize";
+}
+
+.footer-center ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Electrolize";
+  list-style-type: none;
+  height: 100%;
+  font-size: 24px;
+  color: #000;
+}
+
+.footer-center li a {
+  text-decoration: none;
+}
+
+.footer-center li a:visited {
+  color: #000;
+}
+
+.footer-right {
+  font-size: 24px;
+  font-family: "Electrolize";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-right a {
+  color: gray;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icons img {
+  height: 30px;
+  width: 30px;
+}
+
+/* CATEGORIES PAGE */
+
+.sectionCate {
+  background-image: url(./assets/bg_cate_jeux.jpg);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+  z-index: 4;
+}
+
+.cate_name {
+  font-family: "Electrolize";
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.game-card {
+  border-radius: 10px;
+  height: 230px;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  padding: 0.8rem;
+  gap: 20px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Electrolize";
+}
+
+.game-card img {
+  height: 100%;  
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  height: 100%;
+}
+
+.article-info {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  text-align: right;
+  font-size: 12px;
+}
+
+.article-info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  text-align: right;
+  font-size: 12px;
+}
+
+.game-info {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game-info p:first-child {
+  font-weight: bold;
+}
+
+.card-info p:last-child {
+  font-size: 12px;
+}
+
+/* GAME PAGE */
+
+.game-section {
+  background-color: #fff;
+  padding: 50px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 200px;
+  gap: 30px;
+  border-radius: 10px;
+  border: red 3px solid;
+  font-family: "Electrolize";
+  z-index: 3;
+}
+
+.game-section > img:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+}
+
+.card-info2 {
+  width: 100%;
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game_photo {
+  grid-row: 2;
+  grid-column: 1/3;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.game_photo img {
+  height: auto;
+  width: 320px;
+
+  cursor: pointer;
+}
+
+.game-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.desc {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  background-color: #0000007e;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  backdrop-filter: blur(10px);
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1366px;
+  height: 768px;
+  transition: 0.3s all ease-in-out;
+  z-index: 8;
+  align-items: center;
+  justify-content: center;
+}
+
+.suppr {
+  display: none;
+  left: 25%;
+  top: 25%;
+  width: 800px;
+  height: 500px;
+  z-index: 8;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px gray solid;
+}
+
+.active {
+  display: flex;
+}
+.slider {
+  width: 1366px;
+  height: 768px;
+  position: relative;
+  border: white 5px solid;
+}
+
+.slider_nav_next {
+  right: 20px;
+}
+
+.slider_nav_prev {
+  left: 20px;
+}
+.slider_nav_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.slider_nav_button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider_nav_button svg {
+  width: 50px;
+  height: 50px;
+}
+.slider_nav_button svg path {
+  stroke: white;
+}
+
+.slider_content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.slider_content_item {
+  height: 100%;
+  min-width: 100%;
+}
+
+.slider_content_item img {
+  height: 100%;
+  width: 100%;
+}
+
+/* REGISTER PAGE */
+.form-box {
+  display: flex;
+  width: 60%;
+  z-index: 2;
+  height: 50vh;
+}
+
+.form-value {
+  width: 350px;
+  display: flex;
+  height: 50vh;
+  border-radius: 15px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -12px 11px 15px -5px rgba(0, 0, 0, 0.61);
+}
+
+.connect {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.formlogo {
+  padding-top: 5%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.formlogo img {
+  height: 25px;
+}
+
+.connect input[type="text"],
+.connect input[type="email"],
+.connect input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid red;
+  outline: none;
+  font-family: "Electrolize";
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.connect input[type="submit"] {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Electrolize";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.connect input[type="submit"]:hover {
+  background-color: rgb(130, 0, 0);
+}
+
+.connect label {
+  font-family: "Electrolize";
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.connect h2 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#warning {
+  font-size: 0.8rem;
+  font-family: "Electrolize";
+}
+
+.register p {
+  text-align: center;
+  color: #333;
+  font-family: "Electrolize";
+  font-size: 1rem;
+}
+
+.register a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nogame {
+  font-size: 48px;
+  font-family: "Electrolize";
+}
+
+/* END REGISTER PAGE */
+
+/* Mobile */
+@media only screen and (max-width: 615px) {
+  .form-box {
+    width: auto;
+  }
+
+  .context {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 0 5px 5px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .context a {
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .liens {
+    display: none;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .search {
+    height: 20px;
+  }
+
+  .search_bar {
+    padding: 0;
+    padding-right: 5px;
+  }
+
+  header {
+    position: sticky;
+    z-index: 7;
+    top: 0;
+  }
+
+  nav {
+    position: relative;
+    border-radius: 0;
+    padding: 10px;
+    width: 100%;
+    height: 75px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .intro {
+    font-family: "Electrolize";
+    font-size: 30px;
+    text-align: left;
+    margin-top: -25%;
+    margin-right: 25%;
+    padding: 0;
+    width: 225px;
+  }
+
+  video {
+    height: 50vh;
+    right: 5%;
+  }
+
+  .section1 {
+    height: 50vh;
+  }
+
+  .section2 {
+    padding: 50px 0;
+  }
+  .cate-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .round:nth-child(2) div:nth-child(1) {
+    border-radius: 0 10px 0 0;
+  }
+
+  .round:nth-child(3) div:nth-child(1) {
+    border-radius: 0 0 0 0;
+  }
+
+  .round:nth-child(4) div:nth-child(1) {
+    border-radius: 0 0 0 0;
+  }
+
+  .round:nth-child(5) div:nth-child(1) {
+    border-radius: 0 0 0 10px;
+  }
+
+  .round:nth-child(6) div:nth-child(1) {
+    border-radius: 0 0 10px 0;
+  }
+
+  /* CATEGORIE PAGE */
+  .game-card {
+    width: 90vw;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .sectionCate {
+    height: 200px;
+  }
+
+  .modal {
+    display: none;
+    width: 100vw;
+    height: auto;
+    z-index: 8;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    border: white 5px solid;
+  }
+
+  .slider_nav_next {
+    right: 20px;
+  }
+
+  .slider_nav_prev {
+    left: 20px;
+  }
+  .slider_nav_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: 0;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .slider_nav_button:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .slider_nav_button svg {
+    width: 50px;
+    height: 50px;
+  }
+  .slider_nav_button svg path {
+    stroke: white;
+  }
+
+  .slider_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .slider_content_item {
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .slider_content_item img {
+    height: 100%;
+    width: 100%;
+  }
+  footer {
+    justify-content: space-evenly;
+    margin-top: 0;
+    gap: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-left {
+    padding: 1%;
+    width: 40%;
+  }
+
+  .footer-left a {
+    font-size: 10px;
+  }
+
+  .footer-left p {
+    font-size: 12px;
+  }
+
+  .footer-center {
+    padding: 1%;
+    width: 20%;
+  }
+
+  .footer-center ul {
+    font-size: 12px;
+  }
+
+  .footer-right {
+    padding: 1%;
+    width: 40%;
+  }
+
+  .footer-right p,
+  .footer-right a {
+    font-size: 15px;
+  }
+
+  .footer-right img {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  /* GAME PAGE */
+  .game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 100%;
+  }
+
+  .card-info2 {
+    gap: 40px;
+    height: auto;
+  }
+
+  .game-section > img:nth-child(1) {
+    width: 75%;
+    height: auto;
+  }
+  .game_photo {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .game_photo img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 616px) and (max-width: 1599px) {
+  .form-box {
+    width: auto;
+  }
+
+  .context {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 0 5px 5px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .context a {
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .liens {
+    display: none;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .search {
+    height: 20px;
+  }
+
+  .search_bar {
+    padding: 0;
+    padding-right: 5px;
+  }
+
+  header {
+    position: sticky;
+    z-index: 7;
+    top: 0;
+  }
+
+  nav {
+    position: relative;
+    border-radius: 0;
+    padding: 10px;
+    width: 100%;
+    height: 75px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .intro {
+    font-family: "Electrolize";
+    font-size: 30px;
+    text-align: left;
+    margin-top: -25%;
+    margin-right: 25%;
+    padding: 0;
+    width: 225px;
+  }
+
+  video {
+    height: 50vh;
+    right: 5%;
+  }
+
+  .section1 {
+    height: 50vh;
+  }
+
+  .section2 {
+    padding: 50px 0;
+  }
+  .cate-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .round:nth-child(2) div:nth-child(1) {
+    border-radius: 0 10px 0 0;
+  }
+
+  .round:nth-child(3) div:nth-child(1) {
+    border-radius: 0 0 0 0;
+  }
+
+  .round:nth-child(4) div:nth-child(1) {
+    border-radius: 0 0 0 0;
+  }
+
+  .round:nth-child(5) div:nth-child(1) {
+    border-radius: 0 0 0 10px;
+  }
+
+  .round:nth-child(6) div:nth-child(1) {
+    border-radius: 0 0 10px 0;
+  }
+
+  /* CATEGORIE PAGE */
+  .game-card {
+    width: 90vw;
+  }
+
+  .modal {
+    display: none;
+    width: 100vw;
+    height: auto;
+    z-index: 8;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    border: white 5px solid;
+  }
+
+  .slider_nav_next {
+    right: 20px;
+  }
+
+  .slider_nav_prev {
+    left: 20px;
+  }
+  .slider_nav_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: 0;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .slider_nav_button:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .slider_nav_button svg {
+    width: 50px;
+    height: 50px;
+  }
+  .slider_nav_button svg path {
+    stroke: white;
+  }
+
+  .slider_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .slider_content_item {
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .slider_content_item img {
+    height: 100%;
+    width: 100%;
+  }
+  footer {
+    justify-content: space-evenly;
+    margin-top: 0;
+    gap: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-left {
+    padding: 1%;
+    width: 40%;
+  }
+
+  .footer-left a {
+    font-size: 10px;
+  }
+
+  .footer-left p {
+    font-size: 12px;
+  }
+
+  .footer-center {
+    padding: 1%;
+    width: 20%;
+  }
+
+  .footer-center ul {
+    font-size: 12px;
+  }
+
+  .footer-right {
+    padding: 1%;
+    width: 40%;
+  }
+
+  .footer-right p,
+  .footer-right a {
+    font-size: 15px;
+  }
+
+  .footer-right img {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media screen and (min-width: 616px) and (max-width: 1300) {
+  .game_photo {
+    grid-row: 2;
+    grid-column: 1/3;
+    width: 100%;
+    height: 100%;
+    gap: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 816px) and (max-width: 1200px) {
+  /* GAME PAGE */
+  .game-section {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 150px;
+    gap: 30px;
+  }
+
+  .card-info2 {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .game-section > img:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .game_photo img {
+    width: 33%;
+    height: auto;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .sectionCate {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .btn-primary {
+    padding: 0.5rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  /* GAME PAGE */
+  .game-section {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 150px;
+    gap: 30px;
+  }
+
+  .card-info2 {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .game-section > img:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .game_photo img {
+    width: 33%;
+    height: auto;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .sectionCate {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1900px) {
+  /* GAME PAGE */
+  .game-section {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 150px;
+    gap: 30px;
+  }
+
+  .card-info2 {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .game-section > img:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .game_photo img {
+    width: 33%;
+    height: auto;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .sectionCate {
+    height: 200px;
+  }
+}
+
+@media screen and (width: 3840px) {
+  /* GAME PAGE */
+
+  .sectionCate {
+    height: 20vh;
+  }
+
+  .game-section {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr 300px;
+    gap: 30px;
+  }
+
+  .card-info2 {
+    font-size: 38px;
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .article-info2 {
+    font-size: 35px;
+    display: flex;
+  }
+
+  .game-section > img:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .game_photo img {
+    width: 33%;
+    height: auto;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .sectionCate {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .burger {
+    display: block;
+  }
+  .liens {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1031px) {
+  .burger {
+    display: none;
+  }
+
+  .liens {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .btn-primary {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+}
+
+
+
+/* 1921 to 3440 responsive */
+@media only screen and (min-width: 1921px)  {
+
+    /* INDEX */
+    nav {
+        width: 50%;
+        height: 100px;
+    }
+
+    .intro {
+        width: 55%;
+    }
+
+    .logo{
+        height: 60px;
+        width: 350px;
+        font-size: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search_bar {
+        height: 60px;
+        width: 100%;
+        font-size: 40px;
+        border-radius: 0.5rem;
+    }
+    body > header > nav > form > div > svg{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .search {
+        width: 80%;
+        height: 40px;        
+        font-size: 30px;
+    }
+
+    .liens {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+    }
+
+    nav a {
+        height: 60px;
+        width: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;        
+    }
+
+    .intro {
+        font-size: 6rem;
+    }
+
+    video, .section1 {
+        height: 85vh;
+    }
+
+    h2{
+        font-size: 4rem;
+    }      
+
+    .categorie {
+        height: 350px;
+    }
+
+    footer {        
+        justify-content: center;
+        gap: 10%;        
+        height: 15vh;
+    }
+    
+    body > footer > div.footer-left > a{
+        height: 60px;
+        width: 350px;
+        font-size: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-left p{
+        font-size: 2rem;
+    }
+
+    .footer-center ul li{
+        font-size: 3rem;
+    }
+
+    .footer-right p, .footer-right a{
+        font-size: 3rem;
+    } 
+
+    .footer-right img{
+        height: 50px;
+        width: 50px;
+    }
+    /* END INDEX */
+
+    /* LOGIN REGISTER */
+    .form-box {
+       width: 50%; 
+    }
+
+    .form-value {
+       width: 600px;
+    }
+
+    .connect h2{
+        font-size: 3rem;
+    }
+
+    .connect label{
+        font-size: 2rem;
+    }
+    
+    .connect input[type="text"],
+    .connect input[type="email"],
+    .connect input[type="password"], #warning{
+        font-size: 1.5rem;
+    }
+
+    .connect input[type="submit"]{
+        font-size: 2rem;
+    }
+
+    .formlogo img {
+        height: 50px;
+    }
+
+    .register p{
+        font-size: 1.5rem;
+    }  
+
+    /* END LOGIN REGISTER */
+
+    /* CATEGORIE */
+
+    .game-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+        width: 80%;
+        margin: auto;     
+    }    
+
+    .nogame {
+        grid-column: 2;
+    }
+    
+    .game-card {
+        height: 345px;
+        width: 900px;    
+        justify-content: space-around;         
+    }
+
+    .game-card p {
+        font-size: 1.8rem; 
+    }
+
+    .card-info p:last-child {
+        font-size: 2rem;
+    }
+    /* END CATEGORIE */
+
+    /* JEU */
+    .game-section{
+        font-size: 2rem;
+    }
+    
+    .article-info{
+        font-size: 2rem;
+    }
+
+    .article-info2{
+        font-size: 1.2rem;
+    }
+    /* END JEU */
+    
+   
+}
+
+/* END 1921 to 3440 responsive */
+
+
+
+/* 3440+ responsive */
+@media screen and (min-width: 3441px) {
+    .section1 {
+        height: 60vh;
+    }
+
+    video {
+        height: 60vh;
+    }
+
+    .video2 {
+        height: 85vh;
+    }
+
+    .form-value{
+        margin-top: 15%;   
+    }
+
+    
+    
+
+
+}
+
+/* END 3440+ responsive */
